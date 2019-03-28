@@ -207,14 +207,33 @@ input, select, textarea {
 /* Video Background */
 /* Style the video: 100% width and height to cover the entire window */
 #myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
+	position: fixed;
+  	left: 0;
+  	bottom: 0;
+  	min-width: 100%; 
+  	min-height: 100%;
 	z-index: -100;
 }
 
+@media screen and (max-width: 1280px) {
+
+	#myVideo {
+  		position: fixed;
+  		left: 0;
+  		bottom: 0;
+  		min-width: 100%; 
+  		min-height: 100%;
+		z-index: -100;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	
+}
+
+@media screen and (max-width: 736px) {
+
+}
 
 /* Container */
 
@@ -1839,7 +1858,6 @@ dl.contact dd a{
 			color: rgba(255, 255, 255, 0.75);
 			font-size: 1.5em;
 			font-weight: 700;
-			line-height: 1.3em;
 			letter-spacing: 0.04em;
 			float: left;
 			text-align: right;
@@ -1944,6 +1962,7 @@ dl.contact dd a{
 			margin-top: -0.65em;
 			font-size: 1.5em;
 			color: #fff;
+			display: none;
 		}
 
 /* Footer */
@@ -2024,7 +2043,7 @@ dl.contact dd a{
 			#header-wrapper {
 				padding: 2em 0;
 			}
-
+		
 			body.homepage #header-wrapper {
 				height: auto;
 			}
@@ -2146,7 +2165,6 @@ dl.contact dd a{
 						text-decoration: none;
 						font-style: normal;
 						font-weight: normal;
-						line-height: 1;
 						-webkit-font-smoothing: antialiased;
 						-moz-osx-font-smoothing: grayscale;
 						font-size: 18px;
@@ -2273,6 +2291,10 @@ dl.contact dd a{
 		/* Wrappers */
 
 			#header-wrapper {
+				display: none;
+			}
+		
+			#header-wrapper h1 {
 				display: none;
 			}
 
@@ -2430,11 +2452,16 @@ dl.contact dd a{
 				margin-top: 0;
 				padding: 3em 0 1em 0;
 			}
+		
+	}
 
-	}.logo_humantic {
-}
-.logo {
-}
 #p-about {
 	color: #fff;
+}
+
+#logo_vertical {
+	display: block;
+	width: 30%;
+	float: left;
+	margin-right: 10px;
 }
